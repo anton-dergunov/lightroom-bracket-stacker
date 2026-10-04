@@ -1,0 +1,16 @@
+# Keyframes of the demo animation, read by tools/make-demo.sh. See docs/demo.md.
+#
+# crop     the part of the recording to keep, WxH+X+Y in its pixels (leave out to keep everything)
+# width    width of the animation in pixels
+# quality  1-100, for both the WebP and the GIF
+#
+# Then one keyframe per line: its time in the recording, how many seconds to show it, and optionally areas to
+# blur, each as blur=X,Y,W,H in pixels of the finished animation.
+
+crop=3072x1920+0+0
+width=1920
+quality=90
+
+# time   hold  blur
+# 0:04   3
+# 0:11   3     blur=20,700,300,40
