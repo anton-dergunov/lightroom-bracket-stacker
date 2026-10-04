@@ -2,7 +2,7 @@
 
 [![Tests](https://github.com/anton-dergunov/lightroom-bracket-stacker/actions/workflows/tests.yaml/badge.svg)](https://github.com/anton-dergunov/lightroom-bracket-stacker/actions/workflows/tests.yaml)
 
-![Demo](assets/demo.gif)
+![Demo](assets/demo.webp)
 
 ## Overview
 

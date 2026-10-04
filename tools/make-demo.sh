@@ -58,10 +58,10 @@ while read -r time hold blurs; do
     # crop is WxH+X+Y in the recording's pixels; ffmpeg wants W:H:X:Y.
     filter="scale=$width:-2:flags=lanczos"
     [ -z "$crop" ] || filter="crop=$(echo "$crop" | tr 'x+' '::'),$filter"
-    ffmpeg -v error -ss "$time" -i "$recording" -frames:v 1 -vf "$filter" "$frame"
+    ffmpeg -nostdin -v error -ss "$time" -i "$recording" -frames:v 1 -vf "$filter" "$frame"
     [ -f "$frame" ] || { echo "No frame at $time: is it past the end of the recording?" >&2; exit 1; }
 
-    for blur in $blurs; do
+    for blur in ${blurs%%#*}; do
         region=$(echo "${blur#blur=}" | awk -F, '{ printf "%dx%d+%d+%d", $3, $4, $1, $2 }')
         magick "$frame" \( +clone -crop "$region" +repage -blur 0x14 \) -geometry "+${region#*+}" -composite "$frame"
     done

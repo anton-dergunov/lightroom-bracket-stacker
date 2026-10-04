@@ -5,12 +5,20 @@
 # quality  1-100, for both the WebP and the GIF
 #
 # Then one keyframe per line: its time in the recording, how many seconds to show it, and optionally areas to
-# blur, each as blur=X,Y,W,H in pixels of the finished animation.
+# blur, each as blur=X,Y,W,H in pixels of the finished animation. A # ends the line with a note.
 
-crop=3072x1920+0+0
 width=1920
 quality=90
 
 # time   hold  blur
-# 0:04   3
-# 0:11   3     blur=20,700,300,40
+0:09     2.5         # the import command in Library > Plug-in Extras
+0:13     2           # choosing the folder
+0:15.5   2.5         # what the plugin found
+0:26.5   4           # the summary after the import
+0:30     2.5         # the two stacks, expanded
+0:39     2           # Photo > Stacking > Collapse All Stacks
+0:41     2           # collapsed
+0:50     1.5         # both stacks selected
+1:00     2           # Photo > Photo Merge > HDR
+1:36     2           # the first HDR image is ready
+2:20     5           # both HDR images next to their stacks
